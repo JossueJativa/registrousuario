@@ -2,7 +2,6 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 
 // Tercer ciclo: Implementar la funcionalidad para actualizar el correo de un usuario existente.
-import com.registrousuario.Usuario;
 
 public class EmailValidationTest {
 

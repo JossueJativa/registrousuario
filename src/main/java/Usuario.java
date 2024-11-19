@@ -1,5 +1,3 @@
-package com.registrousuario;
-
 public class Usuario {
 
     private String email;
