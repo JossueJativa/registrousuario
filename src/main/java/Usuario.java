@@ -1,8 +1,17 @@
 public class Usuario {
-
+    /**
+     * Establece el nombre del usuario.
+     * 
+     * @param string el nombre del usuario
+     */
     public void setNombre(String string) {
     }
 
+    /**
+     * Establece el email del usuario.
+     * 
+     * @param string el email del usuario
+     */
     public void setEmail(String string) {
     }
 
