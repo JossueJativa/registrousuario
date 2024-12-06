@@ -39,6 +39,50 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>2.22.2</version>
             </plugin>
+
+            <!-- Plugin para cobertura de código (JaCoCo) -->
+            <plugin>
+                <groupId>org.jacoco</groupId>
+                <artifactId>jacoco-maven-plugin</artifactId>
+                <version>0.8.8</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>prepare-agent</goal>
+                            <goal>report</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <!-- Plugin para análisis estático de estilo (Checkstyle) -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-checkstyle-plugin</artifactId>
+                <version>3.2.0</version>
+                <configuration>
+                    <configLocation>src/main/resources/sun_checks.xml</configLocation>
+                    <outputFile>target/checkstyle-result.xml</outputFile>
+                </configuration>
+            </plugin>
+
+            <!-- Plugin para análisis de calidad (SpotBugs) -->
+            <plugin>
+                <groupId>com.github.spotbugs</groupId>
+                <artifactId>spotbugs-maven-plugin</artifactId>
+                <version>4.8.1.0</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>spotbugs</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <outputXml>true</outputXml>
+                    <xmlOutputDirectory>${project.build.directory}</xmlOutputDirectory>
+                  </configuration>
+            </plugin>
         </plugins>
     </build>
 
